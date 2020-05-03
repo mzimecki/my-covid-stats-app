@@ -1,8 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 
 function Table({ covidData }) {
-    if (covidData !== null && covidData.length > 0) {
-      return (
+  if (covidData !== null && covidData.hasOwnProperty("timelineitems")) {
+    return (
+      <div>
+        <h1>
+          COVID-19 statistics for: {covidData.countrytimelinedata[0].info.title}
+        </h1>
+        <h3>source: {covidData.countrytimelinedata[0].info.source}</h3>
         <table className="ui celled table">
           <thead>
             <tr>
@@ -15,11 +20,10 @@ function Table({ covidData }) {
             </tr>
           </thead>
           <tbody>
-            {
-              Object.keys(covidData[0]).reverse().filter(key => key !== 'stat').map((key) => {
-                const data = covidData[0];
+            {Object.keys(covidData.timelineitems[0]).reverse().filter((key) => key !== "stat").map((key) => {
+                const data = covidData.timelineitems[0];
                 return (
-                  <tr>
+                  <tr key={key}>
                     <td>{key}</td>
                     <td>{data[key].new_daily_cases}</td>
                     <td>{data[key].new_daily_deaths}</td>
@@ -28,13 +32,13 @@ function Table({ covidData }) {
                     <td>{data[key].total_deaths}</td>
                   </tr>
                 );
-              })
-              }
+              })}
           </tbody>
         </table>
-      );
-    } else {
-        return(<h2>Loading data...</h2>)
-    }
+      </div>
+    );
+  } else {
+    return <h2>Loading data...</h2>;
+  }
 }
 export default Table;

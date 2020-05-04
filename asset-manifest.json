@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/my-covid-stats-app/static/css/main.18c29816.chunk.css",
-    "main.js": "/my-covid-stats-app/static/js/main.4653c847.chunk.js",
-    "main.js.map": "/my-covid-stats-app/static/js/main.4653c847.chunk.js.map",
+    "main.js": "/my-covid-stats-app/static/js/main.6ebd8b28.chunk.js",
+    "main.js.map": "/my-covid-stats-app/static/js/main.6ebd8b28.chunk.js.map",
     "runtime-main.js": "/my-covid-stats-app/static/js/runtime-main.ede2cbcb.js",
     "runtime-main.js.map": "/my-covid-stats-app/static/js/runtime-main.ede2cbcb.js.map",
-    "static/css/2.d7da9fe2.chunk.css": "/my-covid-stats-app/static/css/2.d7da9fe2.chunk.css",
-    "static/js/2.9c94477b.chunk.js": "/my-covid-stats-app/static/js/2.9c94477b.chunk.js",
-    "static/js/2.9c94477b.chunk.js.map": "/my-covid-stats-app/static/js/2.9c94477b.chunk.js.map",
+    "static/css/2.f0dc9297.chunk.css": "/my-covid-stats-app/static/css/2.f0dc9297.chunk.css",
+    "static/js/2.1b097291.chunk.js": "/my-covid-stats-app/static/js/2.1b097291.chunk.js",
+    "static/js/2.1b097291.chunk.js.map": "/my-covid-stats-app/static/js/2.1b097291.chunk.js.map",
     "index.html": "/my-covid-stats-app/index.html",
-    "precache-manifest.a9b9dccfbcdb914123273fcbe56cf81b.js": "/my-covid-stats-app/precache-manifest.a9b9dccfbcdb914123273fcbe56cf81b.js",
+    "precache-manifest.f4aaaeb5884dd85db43a294a257d7758.js": "/my-covid-stats-app/precache-manifest.f4aaaeb5884dd85db43a294a257d7758.js",
     "service-worker.js": "/my-covid-stats-app/service-worker.js",
-    "static/css/2.d7da9fe2.chunk.css.map": "/my-covid-stats-app/static/css/2.d7da9fe2.chunk.css.map",
+    "static/css/2.f0dc9297.chunk.css.map": "/my-covid-stats-app/static/css/2.f0dc9297.chunk.css.map",
     "static/css/main.18c29816.chunk.css.map": "/my-covid-stats-app/static/css/main.18c29816.chunk.css.map",
-    "static/js/2.9c94477b.chunk.js.LICENSE.txt": "/my-covid-stats-app/static/js/2.9c94477b.chunk.js.LICENSE.txt",
+    "static/js/2.1b097291.chunk.js.LICENSE.txt": "/my-covid-stats-app/static/js/2.1b097291.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/my-covid-stats-app/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.ede2cbcb.js",
-    "static/css/2.d7da9fe2.chunk.css",
-    "static/js/2.9c94477b.chunk.js",
+    "static/css/2.f0dc9297.chunk.css",
+    "static/js/2.1b097291.chunk.js",
     "static/css/main.18c29816.chunk.css",
-    "static/js/main.4653c847.chunk.js"
+    "static/js/main.6ebd8b28.chunk.js"
   ]
 }

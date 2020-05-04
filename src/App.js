@@ -21,21 +21,20 @@ function App() {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}>
+    <div>
         {
           isLoading ? 
-          <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} /> :  
+          <div style={{position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}>
+            <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+          </div>
+          :  
           <div>
             <Header covidData={covidData} />
             <div className="ui divider"></div>
-            <Chart covidData={covidData} />
-            <div className="ui divider"></div>
-            <Table covidData={covidData} />
+            <div className="ui stackable two column grid">
+              <div className="column"><Chart covidData={covidData} /></div>
+              <div className="column"><Table covidData={covidData} /></div>
+            </div>
           </div>
         }
     </div>

@@ -23,11 +23,10 @@ function Header({covidData}) {
 
     return(
         <div>
-            <h1 className="ui header">
+            <h1 className="ui block header">
                 COVID-19 statistics for: {covidData.countrytimelinedata[0].info.title}
                 <div className="sub header">Data source: {covidData.countrytimelinedata[0].info.source}</div>
             </h1>
-            <div className="ui divider"></div>
             <div className="ui statistics">
                 <div className="red statistic">
                     <div className="value">

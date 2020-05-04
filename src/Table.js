@@ -1,13 +1,22 @@
 import * as React from "react";
 
 function Table({ covidData }) {
-    return (
+
+  function formatDate(date) {
+    const index = date.lastIndexOf("/") + 1;
+    const newDate = new Date(date.slice(0, index) +  (2000 + parseInt(date.slice(index), 10)));
+    const day = ('0' + newDate.getDate()).slice(-2);
+    const month = ('0' + (newDate.getMonth() + 1)).slice(-2);
+    return day + '-' + month + '-' + newDate.getFullYear();
+  }
+
+  return (
     <div>
-      <h1>
+      <h1 class="ui header">
         COVID-19 statistics for: {covidData.countrytimelinedata[0].info.title}
+        <div class="sub header">Data source: {covidData.countrytimelinedata[0].info.source}</div>
       </h1>
-      <h5>source: {covidData.countrytimelinedata[0].info.source}</h5>
-      <table className="ui celled table">
+      <table className="ui selectable celled table">
         <thead>
           <tr>
             <th>Date</th>
@@ -23,7 +32,7 @@ function Table({ covidData }) {
               const data = covidData.timelineitems[0];
               return (
                 <tr key={key}>
-                  <td>{key}</td>
+                  <td>{formatDate(key)}</td>
                   <td>{data[key].new_daily_cases}</td>
                   <td>{data[key].new_daily_deaths}</td>
                   <td>{data[key].total_cases}</td>

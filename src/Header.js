@@ -23,33 +23,33 @@ function Header({covidData}) {
 
     return(
         <div>
-            <h1 class="ui header">
+            <h1 className="ui header">
                 COVID-19 statistics for: {covidData.countrytimelinedata[0].info.title}
-                <div class="sub header">Data source: {covidData.countrytimelinedata[0].info.source}</div>
+                <div className="sub header">Data source: {covidData.countrytimelinedata[0].info.source}</div>
             </h1>
             <div className="ui divider"></div>
-            <div class="ui statistics">
-                <div class="red statistic">
-                    <div class="value">
+            <div className="ui statistics">
+                <div className="red statistic">
+                    <div className="value">
                     {getTotalCases()}
                     </div>
-                    <div class="label">
+                    <div className="label">
                     Total Cases
                     </div>
                 </div>
-                <div class="green statistic">
-                    <div class="value">
+                <div className="green statistic">
+                    <div className="value">
                     {getTotalRecoveries()}
                     </div>
-                    <div class="label">
+                    <div className="label">
                     Total Recoveries
                     </div>
                 </div>
-                <div class="black statistic">
-                    <div class="value">
+                <div className="black statistic">
+                    <div className="value">
                     {getTotalDeaths()}
                     </div>
-                    <div class="label">
+                    <div className="label">
                     Total Deaths
                     </div>
                 </div>

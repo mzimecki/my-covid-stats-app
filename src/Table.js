@@ -12,10 +12,6 @@ function Table({ covidData }) {
 
   return (
     <div>
-      <h1 class="ui header">
-        COVID-19 statistics for: {covidData.countrytimelinedata[0].info.title}
-        <div class="sub header">Data source: {covidData.countrytimelinedata[0].info.source}</div>
-      </h1>
       <table className="ui selectable celled table">
         <thead>
           <tr>

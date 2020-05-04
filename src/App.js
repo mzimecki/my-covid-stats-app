@@ -3,6 +3,7 @@ import Table from "./Table";
 import "semantic-ui-css/semantic.min.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
+import Header from "./Header";
 
 function App() {
   const [covidData, setCovidData] = React.useState({});
@@ -28,7 +29,11 @@ function App() {
         {
           isLoading ? 
           <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} /> :  
-          <Table covidData={covidData} />
+          <div>
+            <Header covidData={covidData} />
+            <div className="ui divider"></div>
+            <Table covidData={covidData} />
+          </div>
         }
     </div>
   );

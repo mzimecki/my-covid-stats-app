@@ -4,7 +4,8 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
 import Header from "./Header";
 import Table from "./Table";
-import Chart from "./Chart";
+import ChartTotal from "./ChartTotal";
+import ChartDaily from "./ChartDaily";
 
 function App() {
   const [covidData, setCovidData] = React.useState({});
@@ -32,7 +33,11 @@ function App() {
             <Header covidData={covidData} />
             <div className="ui divider"></div>
             <div className="ui stackable two column grid">
-              <div className="column"><Chart covidData={covidData} /></div>
+              <div className="column">
+                <ChartTotal covidData={covidData} /><br/><br/><br/>
+                <div className="ui divider"></div>
+                <ChartDaily covidData={covidData} />
+              </div>
               <div className="column"><Table covidData={covidData} /></div>
             </div>
           </div>

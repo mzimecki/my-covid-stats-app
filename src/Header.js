@@ -1,58 +1,89 @@
 import * as React from "react";
 
-function Header({covidData}) {
+function Header({totalData}) {
     
-    function getLastRowKey() {
-        return Object.keys(covidData.timelineitems[0]).reverse().find((key) => key !== "stat");
-    }
+    const [totalCovidData, setTotalCovidData] = React.useState({});
+    const [isLoading, setIsLoading] = React.useState(true);
 
-    function getTotalCases() {
-        const data = covidData.timelineitems[0];
-        return data[getLastRowKey()].total_cases;
-    }
-
-    function getTotalRecoveries() {
-        const data = covidData.timelineitems[0];
-        return data[getLastRowKey()].total_recoveries;
-    }
-
-    function getTotalDeaths() {
-        const data = covidData.timelineitems[0];
-        return data[getLastRowKey()].total_deaths;
-    }
+    React.useEffect(() => {
+        fetch("https://api.thevirustracker.com/free-api?countryTotal=PL")
+            .then((res) => res.json())
+            .then((res) => {
+                setTotalCovidData(res);
+                setIsLoading(false);
+            })
+            .catch(error => console.log(error));
+    }, []);
 
     return(
         <div>
-            <h1 className="ui block header">
-                COVID-19 statistics for: {covidData.countrytimelinedata[0].info.title}
-                <div className="sub header">Data source: {covidData.countrytimelinedata[0].info.source}</div>
-            </h1>
-            <div className="ui statistics">
-                <div className="red statistic">
-                    <div className="value">
-                    {getTotalCases()}
+            {
+                isLoading ?
+                <h1 className="ui block header">
+                    <div className="ui segment" style={{height: "100px"}}>
+                        <div className="ui active inverted dimmer">
+                            <div className="ui text loader">Loading</div>
+                        </div>
                     </div>
-                    <div className="label">
-                    Total Cases
+                </h1>
+                :
+                <div>
+                    <h1 className="ui block header">
+                        COVID-19 statistics for: {totalCovidData.countrydata[0].info.title}
+                        <div className="sub header">Data source: {totalCovidData.countrydata[0].info.source}</div>
+                    </h1>
+                    <div className="ui statistics">
+                        <div className="red statistic">
+                            <div className="value">
+                            {totalCovidData.countrydata[0].total_cases}
+                            </div>
+                            <div className="label">
+                            Total Cases
+                            </div>
+                        </div>
+                        <div className="green statistic">
+                            <div className="value">
+                            {totalCovidData.countrydata[0].total_recovered}
+                            </div>
+                            <div className="label">
+                            Total Recoveries
+                            </div>
+                        </div>
+                        <div className="black statistic">
+                            <div className="value">
+                            {totalCovidData.countrydata[0].total_deaths}
+                            </div>
+                            <div className="label">
+                            Total Deaths
+                            </div>
+                        </div>
+                        <div className="red statistic">
+                            <div className="value">
+                            {totalCovidData.countrydata[0].total_new_cases_today}
+                            </div>
+                            <div className="label">
+                            Total New Cases Today
+                            </div>
+                        </div>
+                        <div className="black statistic">
+                            <div className="value">
+                            {totalCovidData.countrydata[0].total_new_deaths_today}
+                            </div>
+                            <div className="label">
+                            Total New Deaths Today
+                            </div>
+                        </div>
+                        <div className="grey statistic">
+                            <div className="value">
+                            {totalCovidData.countrydata[0].total_serious_cases}
+                            </div>
+                            <div className="label">
+                            Serious Cases
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="green statistic">
-                    <div className="value">
-                    {getTotalRecoveries()}
-                    </div>
-                    <div className="label">
-                    Total Recoveries
-                    </div>
-                </div>
-                <div className="black statistic">
-                    <div className="value">
-                    {getTotalDeaths()}
-                    </div>
-                    <div className="label">
-                    Total Deaths
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     )
 }

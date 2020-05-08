@@ -9,14 +9,14 @@ import ChartDaily from "./ChartDaily";
 
 function App() {
   const [covidData, setCovidData] = React.useState({});
-  const [isLoading, setIsLoading] = React.useState(true);
-
+  const [isTimelineLoading, setIsTimelineLoading] = React.useState(true);
+ 
   React.useEffect(() => {
     fetch("https://api.thevirustracker.com/free-api?countryTimeline=PL")
       .then((res) => res.json())
       .then((res) => {
         setCovidData(res);
-        setIsLoading(false);
+        setIsTimelineLoading(false);
       })
       .catch(error => console.log(error));
   }, []);
@@ -24,13 +24,13 @@ function App() {
   return (
     <div>
         {
-          isLoading ? 
+          isTimelineLoading ? 
           <div style={{position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}>
             <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
           </div>
           :  
           <div>
-            <Header covidData={covidData} />
+            <Header />
             <div className="ui divider"></div>
             <div className="ui stackable two column grid">
               <div className="column">

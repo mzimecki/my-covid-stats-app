@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/my-covid-stats-app/static/css/main.b2e03736.chunk.css",
-    "main.js": "/my-covid-stats-app/static/js/main.572803f1.chunk.js",
-    "main.js.map": "/my-covid-stats-app/static/js/main.572803f1.chunk.js.map",
+    "main.css": "/my-covid-stats-app/static/css/main.3b2a1efd.chunk.css",
+    "main.js": "/my-covid-stats-app/static/js/main.66626cec.chunk.js",
+    "main.js.map": "/my-covid-stats-app/static/js/main.66626cec.chunk.js.map",
     "runtime-main.js": "/my-covid-stats-app/static/js/runtime-main.ede2cbcb.js",
     "runtime-main.js.map": "/my-covid-stats-app/static/js/runtime-main.ede2cbcb.js.map",
-    "static/css/2.ac0a3bec.chunk.css": "/my-covid-stats-app/static/css/2.ac0a3bec.chunk.css",
+    "static/css/2.b0918437.chunk.css": "/my-covid-stats-app/static/css/2.b0918437.chunk.css",
     "static/js/2.95d8f6ee.chunk.js": "/my-covid-stats-app/static/js/2.95d8f6ee.chunk.js",
     "static/js/2.95d8f6ee.chunk.js.map": "/my-covid-stats-app/static/js/2.95d8f6ee.chunk.js.map",
     "index.html": "/my-covid-stats-app/index.html",
-    "precache-manifest.e13d6f75daf17159ccd1c20710d2e33c.js": "/my-covid-stats-app/precache-manifest.e13d6f75daf17159ccd1c20710d2e33c.js",
+    "precache-manifest.389fb2be7a28bb6f1ee697c6b0076433.js": "/my-covid-stats-app/precache-manifest.389fb2be7a28bb6f1ee697c6b0076433.js",
     "service-worker.js": "/my-covid-stats-app/service-worker.js",
-    "static/css/2.ac0a3bec.chunk.css.map": "/my-covid-stats-app/static/css/2.ac0a3bec.chunk.css.map",
-    "static/css/main.b2e03736.chunk.css.map": "/my-covid-stats-app/static/css/main.b2e03736.chunk.css.map",
+    "static/css/2.b0918437.chunk.css.map": "/my-covid-stats-app/static/css/2.b0918437.chunk.css.map",
+    "static/css/main.3b2a1efd.chunk.css.map": "/my-covid-stats-app/static/css/main.3b2a1efd.chunk.css.map",
     "static/js/2.95d8f6ee.chunk.js.LICENSE.txt": "/my-covid-stats-app/static/js/2.95d8f6ee.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/my-covid-stats-app/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.ede2cbcb.js",
-    "static/css/2.ac0a3bec.chunk.css",
+    "static/css/2.b0918437.chunk.css",
     "static/js/2.95d8f6ee.chunk.js",
-    "static/css/main.b2e03736.chunk.css",
-    "static/js/main.572803f1.chunk.js"
+    "static/css/main.3b2a1efd.chunk.css",
+    "static/js/main.66626cec.chunk.js"
   ]
 }

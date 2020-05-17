@@ -89,7 +89,7 @@ function Header({totalData}) {
                         </div>
                         <div className="column">
                             <div id="container">
-                                <MapOfPoland/>
+                                <MapOfPoland totalCases={totalCovidData.countrydata[0].total_cases}/>
                             </div>
                         </div>
                     </div>

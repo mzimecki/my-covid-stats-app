@@ -4,7 +4,7 @@ import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-function MapOfPoland() {
+function MapOfPoland({totalCases}) {
     const DefaultIcon = L.icon({
         iconUrl: icon,
         shadowUrl: iconShadow
@@ -20,7 +20,7 @@ function MapOfPoland() {
             />
             <Marker position={position}>
                 <Popup>
-                    Poland.
+                    {totalCases} total cases in Poland.
                 </Popup>
             </Marker>
         </Map>
